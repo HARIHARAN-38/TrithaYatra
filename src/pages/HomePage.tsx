@@ -39,12 +39,12 @@ export function HomePage() {
     return () => document.removeEventListener('visibilitychange', pause)
   }, [])
 
-  const playVideo = (ref: React.RefObject<HTMLVideoElement>) => {
+  const playVideo = (ref: React.RefObject<HTMLVideoElement | null>) => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     ref.current?.play().catch(() => {})
   }
 
-  const stopVideo = (ref: React.RefObject<HTMLVideoElement>) => {
+  const stopVideo = (ref: React.RefObject<HTMLVideoElement | null>) => {
     const element = ref.current
     if (!element) return
     element.pause()
