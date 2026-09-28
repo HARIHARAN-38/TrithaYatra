@@ -1,0 +1,109 @@
+/* Hari edition: a warm, botanical reading room for the same art atlas. */
+:root {
+  color-scheme: dark;
+  --ink: #142f2b;
+  --ink-soft: #1b3c36;
+  --paper: #f1e7d2;
+  --paper-dim: #c6c1ad;
+  --line: rgba(241, 231, 210, .2);
+  --gold: #d1a45e;
+  --rust: #c75d3d;
+  --serif: 'Newsreader', Georgia, serif;
+  --display: 'Bodoni Moda', Georgia, serif;
+}
+
+body, html { background: #142f2b; }
+::selection { color: #142f2b; background: #e5b36a; }
+.site-header { padding-inline: 6.5vw; color: #f4ead7; }
+.wordmark { letter-spacing: .17em; }
+.wordmark-symbol { border-color: #d3a568; background: rgba(18, 43, 38, .72); color: #e5b36a; }
+.header-nav { letter-spacing: .14em; }
+.header-nav a.active::after { background: #df9b55; }
+.site-footer { background: #102a26; color: #c8c2b1; }
+.footer-kicker { color: #e0ae6a; }
+.footer-brand { color: #f5ead7; }
+.footer-brand span { color: #d9744b; }
+.footer-links a { border-color: rgba(241,231,210,.23); color: #f1e7d2; }
+.footer-links a > span { color: #dfa969; }
+.footer-bottom { border-color: rgba(241,231,210,.23); }
+
+.home-page { background: #142f2b; }
+.home-panels { grid-template-columns: 1.12fr .88fr; }
+.home-panel + .home-panel { border-left: 1px solid rgba(239,224,195,.55); }
+.home-panel-video { filter: saturate(.66) brightness(.66) sepia(.12); }
+.home-panel:hover .home-panel-video, .home-panel:focus-visible .home-panel-video { filter: saturate(.92) brightness(.82) sepia(.08); }
+.home-panel--time .home-panel-shade { background: linear-gradient(180deg, rgba(11,37,32,.54), rgba(11,37,32,.05) 36%, rgba(11,37,32,.24) 55%, rgba(11,37,32,.91)); }
+.home-panel--place .home-panel-shade { background: linear-gradient(180deg, rgba(48,27,20,.52), rgba(48,27,20,.04) 38%, rgba(48,27,20,.22) 55%, rgba(48,27,20,.9)); }
+.home-panel-index { color: #f0c277; font-family: var(--display); font-size: 15px; }
+.home-panel-title { max-width: 8ch; font-family: var(--serif); font-size: clamp(78px, 8.2vw, 142px); font-weight: 400; letter-spacing: -.055em; }
+.home-panel-detail { max-width: 29ch; color: #eee1ca; font-family: var(--serif); font-size: clamp(17px, 1.45vw, 22px); }
+.home-panel-action { color: #ffe4b3; }
+.home-panel-arrow { border-color: rgba(255,228,179,.75); }
+.home-panel:hover .home-panel-arrow, .home-panel:focus-visible .home-panel-arrow { background: #f2d19a; color: #18362f; }
+
+.timeline-intro { background: #16342e; }
+.timeline-intro-video { inset-inline-start: 35%; width: 65%; filter: saturate(.75) brightness(.78); }
+.timeline-intro::after { background: linear-gradient(90deg, #16342e 20%, rgba(22,52,46,.95) 43%, rgba(22,52,46,.28) 76%, rgba(22,52,46,.2)), linear-gradient(0deg, #16342e, transparent 25%); }
+.timeline-intro h1 { font-family: var(--serif); font-size: clamp(82px, 8vw, 138px); font-weight: 400; letter-spacing: -.065em; }
+.timeline-intro h1 em { color: #e1aa62; }
+.timeline-intro-bottom { border-color: rgba(230,190,128,.48); }
+.timeline-intro-bottom p { color: #eadfc9; font-family: var(--serif); font-size: 19px; }
+.timeline-stage { background: #18372f; }
+.timeline-stage-vignette { background: linear-gradient(90deg, rgba(13,37,31,.96), rgba(13,37,31,.75) 30%, rgba(13,37,31,.1) 66%, rgba(13,37,31,.2)), linear-gradient(0deg, rgba(13,37,31,.85), transparent 30%); }
+.timeline-stage-top, .chapter-index { color: #e9bd79; }
+.chapter-copy h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.055em; }
+.chapter-subtitle { color: #e9bd79; }
+.chapter-open, .button-link { border-color: rgba(232,191,124,.78); background: rgba(20,47,43,.65); color: #f5ead6; }
+.chapter-open:hover, .button-link:hover { border-color: #f2c67e; background: #f2c67e; color: #142f2b; }
+.timeline-nav { border-color: rgba(232,213,177,.28); background: rgba(17,43,37,.96); }
+.timeline-nav-range span:nth-child(2), .timeline-nav-number, .timeline-nav-chapters button.active .timeline-nav-number { color: #e8b46b; }
+.timeline-nav-progress > span { background: #dc8750; }
+.timeline-nav-chapters button.active { background: rgba(207,127,71,.24); }
+.chapter-film-page, .chapter-film { background-color: #142f2b; }
+.chapter-film-video { filter: saturate(.78) brightness(.72) sepia(.07); }
+.chapter-film-shade { background: linear-gradient(90deg, rgba(13,37,31,.95), rgba(13,37,31,.76) 37%, rgba(13,37,31,.2) 73%), linear-gradient(0deg, rgba(13,37,31,.88), transparent 31%); }
+.chapter-film-subtitle, .typewriter-kicker, .chapter-film-back span { color: #edb66c; }
+.chapter-film-artwork { border-color: rgba(231,187,118,.72); background: rgba(20,47,43,.83); }
+.chapter-film-notes { background: #1b3b34; }
+.chapter-film-notes-heading h2 { color: #f1e7d2; }
+.chapter-film-facts span, .film-motif-list details { border-color: rgba(241,231,210,.25); }
+.film-motif-list summary { color: #e8c58b; }
+.paper-page { background: radial-gradient(ellipse at 50% 35%, #31584a, #112b26 76%); }
+.paper-toolbar { color: #e4d7c0; }
+.paper-back span { color: #e09a5d; }
+.paper-toolbar button { border-color: #d3a568; color: #f0dcb7; }
+.newspaper-sheet { box-shadow: inset 0 0 0 5px rgba(176,106,58,.08); }
+.newspaper-masthead { border-bottom-color: #a25a39; }
+.newspaper-masthead-ornament { color: #b8613f; }
+.newspaper-section-label { color: #a14d35; }
+.map-page { background: #dad9c6; }
+.map-page .site-header { background: linear-gradient(180deg, rgba(17,43,37,.96), rgba(17,43,37,.72) 76%, transparent); }
+.art-map .leaflet-tile-pane { filter: saturate(.72) sepia(.14) hue-rotate(8deg) contrast(.95) brightness(.96); }
+.art-map .leaflet-control-attribution { background: rgba(17,43,37,.86); }
+.art-map .leaflet-control-attribution a { color: #f0c277; }
+.art-map .leaflet-control-zoom a { background: #f0e7d2; color: #18372f; }
+.art-marker { border-radius: 50% 50% 50% 8px; background: #b95738; }
+.art-marker-cluster { background: #1d5545; }
+.location-panel { border-color: rgba(68,93,68,.25); background: #f3ecd9; }
+.location-overline, .location-facts span { color: #a34f35; }
+.location-sources a { border-color: #a85c3d; color: #8d442f; }
+.sources-hero { background: #16342e; }
+.sources-hero-top { color: #e7ba76; }
+.sources-hero h1 em { color: #e0a45d; }
+.sources-archive { background: #f1e8d5; color: #203b35; }
+.sources-jump, .archive-section { border-color: #afa890; }
+.sources-jump a { color: #ab5537; }
+.archive-number, .archive-row-number, .archive-art-copy a { color: #a24d34; }
+.archive-section-head p, .archive-row-main small, .archive-art-copy p { color: #62695d; }
+.archive-link-row:hover { background: #e8dcc3; }
+.archive-art-card { border-color: #c6b99e; background: #f8f1e2; }
+.not-found { background: #142f2b; }
+.not-found h1 { color: #f1e7d2; }
+
+@media (max-width: 760px) {
+  .home-panels { grid-template-columns: 1fr; }
+  .home-panel + .home-panel { border-top: 1px solid rgba(239,224,195,.55); border-left: 0; }
+  .home-panel-title { font-size: clamp(64px, 14vw, 100px); }
+  .timeline-intro-video { filter: saturate(.68) brightness(.58); }
+  .timeline-intro::after { background: linear-gradient(0deg, #16342e 13%, rgba(22,52,46,.77) 48%, rgba(22,52,46,.16) 100%); }
+}
